@@ -1,0 +1,25 @@
+sequenceDiagram
+    participant 管理员/系统
+    participant 前端页面
+    participant StockForecastController
+    participant StockForecastService
+    participant Stock
+
+    %% 模型训练核心流程
+    管理员/系统->>前端页面: 选择训练参数（股票代码/时间范围），点击"启动模型训练"
+    前端页面->>StockForecastController: 发起训练请求（携带StockForecastParam：stockCode+时间范围）
+    StockForecastController->>StockForecastService: 调用trainForecastModel方法（传入参数）
+    %% 步骤1：获取训练数据集
+    StockForecastService->>Stock: 提取该股票历史价格/交易数据（训练集）
+    Stock-->>StockForecastService: 返回历史时序数据
+    %% 步骤2：执行模型训练
+    StockForecastService->>StockForecastService: 调用算法训练模型（如LSTM/线性回归）
+    alt 训练失败
+        StockForecastService-->>前端页面: 提示"模型训练失败，请检查数据"
+        前端页面->>管理员/系统: 展示训练失败提示
+    else 训练成功
+        StockForecastService->>StockForecastService: 保存训练后的模型（关联股票代码）
+        StockForecastService-->>StockForecastController: 返回训练成功响应
+        StockForecastController-->>前端页面: 回传ForecastResponse（训练成功+模型版本）
+        前端页面->>管理员/系统: 展示"模型训练完成，可用于预测"提示
+    end
