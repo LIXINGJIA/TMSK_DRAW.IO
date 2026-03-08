@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant 用户
+    participant 前端页面
+    participant UserController
+    participant UserService
+    participant User
+
+    %% 查看个人信息核心流程
+    用户->>前端页面: 点击"个人信息"按钮
+    前端页面->>UserController: 发起信息查询请求（携带用户ID）
+    UserController->>UserService: 调用getUserInfo方法（传入用户ID）
+    UserService->>User: 根据用户ID查询用户信息
+    User-->>UserService: 返回用户昵称/手机号/邮箱等信息
+    UserService-->>UserController: 返回用户信息数据
+    UserController-->>前端页面: 回传用户信息
+    前端页面->>用户: 展示个人信息（昵称/手机号/邮箱）
