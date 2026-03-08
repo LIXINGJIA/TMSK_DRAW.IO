@@ -1,9 +1,114 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" version="29.6.1">
   <diagram name="第 1 页" id="6jmtTJv0ZfKHI97acEjh">
-    <mxGraphModel>
+    <mxGraphModel dx="2026" dy="1114" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="bwQ9NWfhJWci9I7mmVya-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;strokeWidth=2;fontSize=20;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="用户" vertex="1">
+          <mxGeometry height="976" width="150" x="20" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="bwQ9NWfhJWci9I7mmVya-2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;strokeWidth=2;fontSize=20;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="前端页面" vertex="1">
+          <mxGeometry height="976" width="150" x="361" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="bwQ9NWfhJWci9I7mmVya-3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;strokeWidth=2;fontSize=20;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="StockForecastController" vertex="1">
+          <mxGeometry height="976" width="247" x="610" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="bwQ9NWfhJWci9I7mmVya-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;strokeWidth=2;fontSize=20;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="StockForecastService" vertex="1">
+          <mxGeometry height="976" width="227" x="910" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="bwQ9NWfhJWci9I7mmVya-5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;strokeWidth=2;fontSize=20;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="Stock" vertex="1">
+          <mxGeometry height="976" width="150" x="1187" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="bwQ9NWfhJWci9I7mmVya-6" parent="1" style="shape=umlFrame;dashed=1;pointerEvents=0;dropTarget=0;strokeColor=#3700CC;height=51;width=66;strokeWidth=5;fontSize=20;fillColor=#6a00ff;fontColor=#ffffff;" value="alt" vertex="1">
+          <mxGeometry height="452" width="1049" x="84" y="539" as="geometry" />
+        </mxCell>
+        <mxCell id="bwQ9NWfhJWci9I7mmVya-7" parent="bwQ9NWfhJWci9I7mmVya-6" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=20;" value="[预测失败]" vertex="1">
+          <mxGeometry height="20" width="1019" x="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bwQ9NWfhJWci9I7mmVya-8" parent="bwQ9NWfhJWci9I7mmVya-6" style="shape=line;dashed=1;whiteSpace=wrap;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=center;strokeColor=#B3B3B3;fontSize=20;" value="[预测成功]" vertex="1">
+          <mxGeometry height="4" width="1049" y="164" as="geometry" />
+        </mxCell>
+        <mxCell id="bwQ9NWfhJWci9I7mmVya-9" edge="1" parent="1" source="bwQ9NWfhJWci9I7mmVya-1" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=2;fontSize=20;" target="bwQ9NWfhJWci9I7mmVya-2" value="选择股票代码，点击&quot;开始预测&quot;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="274" y="223" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bwQ9NWfhJWci9I7mmVya-10" edge="1" parent="1" source="bwQ9NWfhJWci9I7mmVya-2" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=2;fontSize=20;" target="bwQ9NWfhJWci9I7mmVya-3" value="发起预测请求">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="563" y="275" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bwQ9NWfhJWci9I7mmVya-11" edge="1" parent="1" source="bwQ9NWfhJWci9I7mmVya-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=2;fontSize=20;" target="bwQ9NWfhJWci9I7mmVya-4" value="调用trainForecastModel方法（传入参数）">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="869" y="333" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bwQ9NWfhJWci9I7mmVya-12" edge="1" parent="1" source="bwQ9NWfhJWci9I7mmVya-4" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=2;fontSize=20;" target="bwQ9NWfhJWci9I7mmVya-5" value="提取该股票数据">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1163" y="385" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bwQ9NWfhJWci9I7mmVya-13" edge="1" parent="1" source="bwQ9NWfhJWci9I7mmVya-5" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;strokeWidth=2;fontSize=20;" target="bwQ9NWfhJWci9I7mmVya-4" value="返回历史时序数据">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1166" y="437" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bwQ9NWfhJWci9I7mmVya-14" edge="1" parent="1" source="bwQ9NWfhJWci9I7mmVya-4" style="curved=1;endArrow=block;rounded=0;strokeWidth=2;fontSize=20;" target="bwQ9NWfhJWci9I7mmVya-4" value="调用算法训练模型预测">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1098" y="489" />
+              <mxPoint x="1098" y="519" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bwQ9NWfhJWci9I7mmVya-15" edge="1" parent="1" source="bwQ9NWfhJWci9I7mmVya-4" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;strokeWidth=2;fontSize=20;" target="bwQ9NWfhJWci9I7mmVya-2" value="提示&quot;模型预测失败，请检查数据&quot;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="753" y="626" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bwQ9NWfhJWci9I7mmVya-16" edge="1" parent="1" source="bwQ9NWfhJWci9I7mmVya-2" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=2;fontSize=20;" target="bwQ9NWfhJWci9I7mmVya-1" value="展示预测失败提示">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="277" y="678" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bwQ9NWfhJWci9I7mmVya-18" edge="1" parent="1" source="bwQ9NWfhJWci9I7mmVya-4" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;strokeWidth=2;fontSize=20;" target="bwQ9NWfhJWci9I7mmVya-3" value="返回预测结果">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="872" y="861" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bwQ9NWfhJWci9I7mmVya-19" edge="1" parent="1" source="bwQ9NWfhJWci9I7mmVya-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;strokeWidth=2;fontSize=20;" target="bwQ9NWfhJWci9I7mmVya-2" value="回传ForecastResponse">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="566" y="919" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bwQ9NWfhJWci9I7mmVya-20" edge="1" parent="1" source="bwQ9NWfhJWci9I7mmVya-2" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=2;fontSize=20;" target="bwQ9NWfhJWci9I7mmVya-1" value="展示&quot;模型预测成功&quot;展示模型预测结果">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="277" y="971" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bwQ9NWfhJWci9I7mmVya-21" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="" vertex="1">
+          <mxGeometry height="60" width="30" x="180" y="110" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
