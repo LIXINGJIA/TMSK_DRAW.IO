@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant 用户
+    participant 前端页面
+    participant StockController
+    participant StockService
+    participant Stock
+
+    %% 股票数据可视化核心流程
+    用户->>前端页面: 选择股票+时间范围（日/周/月），点击"可视化"
+    前端页面->>StockController: 发起可视化请求（携带StockQueryParam：stockCode+timeRange）
+    StockController->>StockService: 调用getStockVisualData方法（传入stockCode+timeRange）
+    StockService->>Stock: 根据股票代码+时间范围查询历史价格数据
+    Stock-->>StockService: 返回该股票对应时段的历史数据（historyData列表）
+    StockService-->>StockController: 返回可视化所需的历史数据
+    StockController-->>前端页面: 回传StockResponse（含历史数据）
+    前端页面->>用户: 展示股票走势图表（K线/折线图）
