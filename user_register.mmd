@@ -1,0 +1,33 @@
+sequenceDiagram
+    participant 用户
+    participant 前端页面
+    participant UserController
+    participant UserService
+    participant UserMapper
+    participant EncryptUtil
+
+    %% 注册核心精简流程
+    用户->>前端页面: 输入注册信息，点击注册
+    前端页面->>UserController: 发起注册请求（用户名/密码/验证码）
+    UserController->>UserService: 调用register方法传递参数
+    %% 核心校验1：用户名唯一性
+    UserService->>UserMapper: 查询用户名是否存在
+    UserMapper-->>UserService: 返回查询结果
+    alt 用户名已存在
+        UserService-->>前端页面: 提示"用户名已注册"
+        前端页面->>用户: 展示注册失败
+    else 用户名不存在
+        %% 核心校验2：验证码验证（简化，不展开Redis细节）
+        alt 验证码错误
+            UserService-->>前端页面: 提示"验证码错误"
+            前端页面->>用户: 展示注册失败
+        else 验证码正确
+            %% 密码加密+入库
+            UserService->>EncryptUtil: 加密原始密码
+            EncryptUtil-->>UserService: 返回加密密码
+            UserService->>UserMapper: 插入新用户数据
+            UserMapper-->>UserService: 返回入库成功
+            UserService-->>前端页面: 提示"注册成功"
+            前端页面->>用户: 展示注册成功并跳转登录页
+        end
+    end
