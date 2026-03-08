@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant 用户
+    participant 前端页面
+    participant StockController
+    participant StockService
+    participant Stock
+
+    %% 股票信息查看核心流程
+    用户->>前端页面: 点击搜索结果中某只股票/输入股票代码，查看详情
+    前端页面->>StockController: 发起详情请求（携带StockQueryParam：stockCode）
+    StockController->>StockService: 调用getStockDetail方法（传入stockCode）
+    StockService->>Stock: 根据stockCode查询单只股票完整数据
+    Stock-->>StockService: 返回该股票详情（代码/名称/价格/涨跌幅等）
+    StockService-->>StockController: 返回单只股票详情数据
+    StockController-->>前端页面: 回传StockResponse（含股票详情）
+    前端页面->>用户: 展示股票详情（价格、涨跌幅、成交量等核心数据）
