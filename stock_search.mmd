@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant 用户
+    participant 前端页面
+    participant StockController
+    participant StockService
+    participant Stock
+
+    %% 股票搜索核心流程
+    用户->>前端页面: 输入搜索关键词（代码/名称），点击搜索
+    前端页面->>StockController: 发起搜索请求（携带StockQueryParam：keyword）
+    StockController->>StockService: 调用searchStock方法（传入keyword）
+    StockService->>Stock: 根据keyword匹配股票代码/名称
+    Stock-->>StockService: 返回匹配的股票列表（Stock集合）
+    StockService-->>StockController: 返回股票列表数据
+    StockController-->>前端页面: 回传StockResponse（含股票列表）
+    前端页面->>用户: 展示搜索结果（股票代码/名称/当前价格）
