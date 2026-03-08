@@ -1,0 +1,30 @@
+sequenceDiagram
+    participant 用户
+    participant 前端页面
+    participant UserStockController
+    participant UserStockService
+    participant UserStock
+    participant Stock
+
+    %% 添加自选股核心流程
+    用户->>前端页面: 选择股票，点击"加入自选股"按钮
+    前端页面->>UserStockController: 发起添加请求（携带UserStockParam：userId+stockCode）
+    UserStockController->>UserStockService: 调用addUserStock方法（传入userId+stockCode）
+    %% 核心校验：该股票是否已在自选股中
+    UserStockService->>UserStock: 查询该用户是否已添加该股票
+    alt 已添加
+        UserStockService-->>前端页面: 提示"该股票已在自选股中"
+        前端页面->>用户: 展示添加失败提示
+    else 未添加
+        UserStockService->>Stock: 校验股票代码是否有效
+        alt 股票代码无效
+            UserStockService-->>前端页面: 提示"股票代码无效"
+            前端页面->>用户: 展示添加失败提示
+        else 股票代码有效
+            UserStockService->>UserStock: 新增自选股记录（userId+stockCode+addTime）
+            UserStock-->>UserStockService: 返回添加成功结果
+            UserStockService-->>UserStockController: 返回添加成功响应
+            UserStockController-->>前端页面: 回传CommonResponse（添加成功）
+            前端页面->>用户: 展示"添加自选股成功"提示
+        end
+    end
