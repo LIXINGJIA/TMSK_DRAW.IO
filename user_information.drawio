@@ -1,9 +1,83 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" version="29.6.1">
   <diagram name="第 1 页" id="R8cskRZSCWUbDfEMw3kP">
-    <mxGraphModel>
+    <mxGraphModel dx="2026" dy="1114" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="aA5u6qIeU1H0F4v8pXQM-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=20;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="用户" vertex="1">
+          <mxGeometry height="588" width="150" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="aA5u6qIeU1H0F4v8pXQM-2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=20;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="前端页面" vertex="1">
+          <mxGeometry height="588" width="150" x="343" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="aA5u6qIeU1H0F4v8pXQM-3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=20;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="UserController" vertex="1">
+          <mxGeometry height="588" width="150" x="653" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="aA5u6qIeU1H0F4v8pXQM-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=20;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="UserService" vertex="1">
+          <mxGeometry height="588" width="150" x="985" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="aA5u6qIeU1H0F4v8pXQM-5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=20;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="User" vertex="1">
+          <mxGeometry height="588" width="150" x="1293" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="aA5u6qIeU1H0F4v8pXQM-6" edge="1" parent="1" source="aA5u6qIeU1H0F4v8pXQM-1" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=20;" target="aA5u6qIeU1H0F4v8pXQM-2" value="点击&quot;个人信息&quot;按钮">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="265" y="133" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aA5u6qIeU1H0F4v8pXQM-7" edge="1" parent="1" source="aA5u6qIeU1H0F4v8pXQM-2" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=20;" target="aA5u6qIeU1H0F4v8pXQM-3" value="发起信息查询请求（携带用户ID）">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="582" y="185" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aA5u6qIeU1H0F4v8pXQM-8" edge="1" parent="1" source="aA5u6qIeU1H0F4v8pXQM-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=20;" target="aA5u6qIeU1H0F4v8pXQM-4" value="调用getUserInfo方法（传入用户ID）">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="903" y="243" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aA5u6qIeU1H0F4v8pXQM-9" edge="1" parent="1" source="aA5u6qIeU1H0F4v8pXQM-4" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=20;" target="aA5u6qIeU1H0F4v8pXQM-5" value="根据用户ID查询用户信息">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1223" y="295" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aA5u6qIeU1H0F4v8pXQM-10" edge="1" parent="1" source="aA5u6qIeU1H0F4v8pXQM-5" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=20;" target="aA5u6qIeU1H0F4v8pXQM-4" value="返回用户昵称/手机号/邮箱等信息">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1226" y="347" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aA5u6qIeU1H0F4v8pXQM-11" edge="1" parent="1" source="aA5u6qIeU1H0F4v8pXQM-4" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=20;" target="aA5u6qIeU1H0F4v8pXQM-3" value="返回用户信息数据">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="906" y="399" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aA5u6qIeU1H0F4v8pXQM-12" edge="1" parent="1" source="aA5u6qIeU1H0F4v8pXQM-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=20;" target="aA5u6qIeU1H0F4v8pXQM-2" value="回传用户信息">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="585" y="451" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aA5u6qIeU1H0F4v8pXQM-13" edge="1" parent="1" source="aA5u6qIeU1H0F4v8pXQM-2" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=20;" target="aA5u6qIeU1H0F4v8pXQM-1" value="展示个人信息（昵称/手机号/邮箱）">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="268" y="503" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aA5u6qIeU1H0F4v8pXQM-14" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="" vertex="1">
+          <mxGeometry height="60" width="30" x="190" y="20" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
