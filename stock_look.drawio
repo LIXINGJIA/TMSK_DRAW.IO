@@ -1,9 +1,83 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" version="29.6.1">
   <diagram name="第 1 页" id="-bPjsHA8_KTTLY5nFRW9">
-    <mxGraphModel>
+    <mxGraphModel dx="1891" dy="1040" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="Pwsx_n6LVFgpw83AeLNz-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=20;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="用户" vertex="1">
+          <mxGeometry height="600" width="150" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Pwsx_n6LVFgpw83AeLNz-2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=20;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="前端页面" vertex="1">
+          <mxGeometry height="600" width="150" x="450" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Pwsx_n6LVFgpw83AeLNz-3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=20;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="StockController" vertex="1">
+          <mxGeometry height="600" width="150" x="909" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Pwsx_n6LVFgpw83AeLNz-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=20;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="StockService" vertex="1">
+          <mxGeometry height="600" width="150" x="1293" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Pwsx_n6LVFgpw83AeLNz-5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=20;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="Stock" vertex="1">
+          <mxGeometry height="600" width="150" x="1633" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Pwsx_n6LVFgpw83AeLNz-6" edge="1" parent="1" source="Pwsx_n6LVFgpw83AeLNz-1" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=20;" target="Pwsx_n6LVFgpw83AeLNz-2" value="点击搜索结果中某只股票/输入股票代码，查看详情">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="319" y="127" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pwsx_n6LVFgpw83AeLNz-7" edge="1" parent="1" source="Pwsx_n6LVFgpw83AeLNz-2" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=20;" target="Pwsx_n6LVFgpw83AeLNz-3" value="发起详情请求（携带StockQueryParam：stockCode）">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="763" y="185" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pwsx_n6LVFgpw83AeLNz-8" edge="1" parent="1" source="Pwsx_n6LVFgpw83AeLNz-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=20;" target="Pwsx_n6LVFgpw83AeLNz-4" value="调用getStockDetail方法（传入stockCode）">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1185" y="243" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pwsx_n6LVFgpw83AeLNz-9" edge="1" parent="1" source="Pwsx_n6LVFgpw83AeLNz-4" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=20;" target="Pwsx_n6LVFgpw83AeLNz-5" value="根据stockCode查询单只股票完整数据">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1547" y="301" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pwsx_n6LVFgpw83AeLNz-10" edge="1" parent="1" source="Pwsx_n6LVFgpw83AeLNz-5" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=20;" target="Pwsx_n6LVFgpw83AeLNz-4" value="返回该股票详情">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1550" y="353" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pwsx_n6LVFgpw83AeLNz-11" edge="1" parent="1" source="Pwsx_n6LVFgpw83AeLNz-4" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=20;" target="Pwsx_n6LVFgpw83AeLNz-3" value="返回单只股票详情数据">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1188" y="405" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pwsx_n6LVFgpw83AeLNz-12" edge="1" parent="1" source="Pwsx_n6LVFgpw83AeLNz-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=20;" target="Pwsx_n6LVFgpw83AeLNz-2" value="回传StockResponse（股票详情）">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="766" y="463" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pwsx_n6LVFgpw83AeLNz-13" edge="1" parent="1" source="Pwsx_n6LVFgpw83AeLNz-2" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=20;" target="Pwsx_n6LVFgpw83AeLNz-1" value="展示股票详情">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="322" y="515" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pwsx_n6LVFgpw83AeLNz-14" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="" vertex="1">
+          <mxGeometry height="60" width="30" x="190" y="20" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
